@@ -21,20 +21,6 @@ class ContactController extends Controller
 
     /**
      * Create a new contact controller instance.
-     * @return \Illuminate\Http\JsonResponse
-     */
-    public function index()
-    {
-        $this->contactService->processTemp();
-
-        return response()->json([
-            'success' => true,
-            'message' => 'Contacts queued successfully'
-        ]);
-    }
-
-    /**
-     * Create a new contact controller instance.
      * @param ContactRequest $request
      * @return \Illuminate\Http\JsonResponse
      */
